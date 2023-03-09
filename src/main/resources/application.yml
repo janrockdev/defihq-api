@@ -1,0 +1,10 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_DATABASE_URL:mongodb://localhost:27017/defihq-api}
+      uuid-representation: standard
+mongock:
+  migration-scan-package: org.defihq.defihq_api.changelogs
+  transaction-enabled: true
+springdoc:
+  pathsToMatch: /api/**, /authenticate, /register
